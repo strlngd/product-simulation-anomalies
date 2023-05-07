@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Region } from '../models/region';
 import { Point } from '../models/point';
+import * as regionsJson from '../../data/regions.json';
 
 @Component({
   selector: 'app-store-visualizer',
@@ -18,45 +19,24 @@ export class StoreVisualizerComponent {
 
   readonly colors: string[] = ['#00FF00', '#FFFF00', '#FF8800', '#FF0000'];
   regionPaths: Map<Region, Path2D> = new Map<Region, Path2D>();
-  tooltip: { x: number; y: number; visible: boolean; text: string } = {
+  selectedRegion!: Region;
+  tooltip: {
+    x: number;
+    y: number;
+    visible: boolean;
+    title: string;
+    content: string;
+  } = {
     x: 0,
     y: 0,
     visible: false,
-    text: '',
+    title: '',
+    content: '',
   };
 
   ngAfterViewInit() {
-    const regions: Region[] = [
-      {
-        id: '1',
-        name: 'Produce',
-        points: [
-          { x: 609, y: 97 },
-          { x: 744, y: 97 },
-          { x: 744, y: 297 },
-          { x: 609, y: 297 },
-        ],
-      },
-      {
-        id: '2',
-        name: 'Bakery',
-        points: [
-          { x: 10, y: 10 },
-          { x: 100, y: 100 },
-          { x: 10, y: 100 },
-        ],
-      },
-      {
-        id: '3',
-        name: 'Floral',
-        points: [
-          { x: 609, y: 325 },
-          { x: 700, y: 300 },
-          { x: 700, y: 385 },
-          { x: 609, y: 410 },
-        ],
-      },
-    ];
+    const regions: Region[] = Array.from<Region>(regionsJson);
+    console.log(regions);
     const canvas = this.heatmapCanvas.nativeElement;
     this.ctx = canvas.getContext('2d');
 
@@ -92,7 +72,8 @@ export class StoreVisualizerComponent {
     }
     this.tooltip.x = x;
     this.tooltip.y = y - this.overlayDiv.nativeElement.clientHeight;
-    this.tooltip.text = 'Click for more details...';
+    this.tooltip.title = region.name;
+    this.tooltip.content = `Click for more details...`;
     this.tooltip.visible = true;
   }
 
@@ -101,8 +82,23 @@ export class StoreVisualizerComponent {
     const y = e.offsetY;
     const region = this.getRegionFromPoint(x, y);
     if (!region) return;
-    this.tooltip.text = `Clicked ${region.name}`;
+    this.tooltip.title = region.name;
+    this.tooltip.content = `Clicked ${region.name}`;
+    this.selectedRegion = region;
   }
+
+  // drawRegionRect(
+  //   color: string,
+  //   x: number,
+  //   y: number,
+  //   width: number,
+  //   height: number
+  // ) {
+  //   this.ctx.fillStyle = color;
+  //   this.ctx.globalAlpha = this.overlayAlpha;
+  //   this.ctx.fillRect(x, y, width, height);
+  //   this.ctx.globalAlpha = 1;
+  // }
 
   drawRegionPoints(color: string, points: Point[]) {
     if (points.length < 3) return;
