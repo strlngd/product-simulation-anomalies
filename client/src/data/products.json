@@ -1,0 +1,422 @@
+[
+  {
+    "id": "p_1278",
+    "name": "Ground Beef",
+    "region_id": "meats",
+    "buy_factor": 0.52
+  },
+  {
+    "id": "p_1279",
+    "name": "Raw Chicken",
+    "region_id": "meats",
+    "buy_factor": 0.43
+  },
+  {
+    "id": "p_1280",
+    "name": "Raw Pork",
+    "region_id": "meats",
+    "buy_factor": 0.31
+  },
+  {
+    "id": "p_1165",
+    "name": "Onion",
+    "region_id": "produce",
+    "buy_factor": 0.31
+  },
+  {
+    "id": "p_1166",
+    "name": "Tomato",
+    "region_id": "produce",
+    "buy_factor": 0.28
+  },
+  {
+    "id": "p_1167",
+    "name": "Orange",
+    "region_id": "produce",
+    "buy_factor": 0.24
+  },
+  {
+    "id": "p_1248",
+    "name": "Whole sub",
+    "region_id": "deli",
+    "buy_factor": 0.16
+  },
+  {
+    "id": "p_1249",
+    "name": "Ham",
+    "region_id": "deli",
+    "buy_factor": 0.34
+  },
+  {
+    "id": "p_1250",
+    "name": "Turkey",
+    "region_id": "deli",
+    "buy_factor": 0.32
+  },
+  {
+    "id": "p_1942",
+    "name": "Raw Shrimp",
+    "region_id": "seafood",
+    "buy_factor": 0.09
+  },
+  {
+    "id": "p_1943",
+    "name": "Raw Salmon",
+    "region_id": "seafood",
+    "buy_factor": 0.13
+  },
+  {
+    "id": "p_1944",
+    "name": "Raw Lobster",
+    "region_id": "seafood",
+    "buy_factor": 0.06
+  },
+  {
+    "id": "p_2014",
+    "name": "Milk",
+    "region_id": "milk_products",
+    "buy_factor": 1.02
+  },
+  {
+    "id": "p_2015",
+    "name": "Yogurt",
+    "region_id": "milk_products",
+    "buy_factor": 0.41
+  },
+  {
+    "id": "p_2016",
+    "name": "Sour Cream",
+    "region_id": "milk_products",
+    "buy_factor": 0.32
+  },
+  {
+    "id": "p_1676",
+    "name": "Cheddar",
+    "region_id": "cheese",
+    "buy_factor": 0.32
+  },
+  {
+    "id": "p_1677",
+    "name": "Swiss",
+    "region_id": "cheese",
+    "buy_factor": 0.28
+  },
+  {
+    "id": "p_1678",
+    "name": "Parmesan",
+    "region_id": "cheese",
+    "buy_factor": 0.16
+  },
+  {
+    "id": "p_1931",
+    "name": "Cereal",
+    "region_id": "aisle_1",
+    "buy_factor": 0.79
+  },
+  {
+    "id": "p_1932",
+    "name": "Coffee",
+    "region_id": "aisle_1",
+    "buy_factor": 0.23
+  },
+  {
+    "id": "p_1933",
+    "name": "Breakfast Bar",
+    "region_id": "aisle_1",
+    "buy_factor": 0.19
+  },
+  {
+    "id": "p_2061",
+    "name": "Tomato Soup",
+    "region_id": "aisle_2",
+    "buy_factor": 0.16
+  },
+  {
+    "id": "p_2062",
+    "name": "Chicken Noodle Soup",
+    "region_id": "aisle_2",
+    "buy_factor": 0.17
+  },
+  {
+    "id": "p_2063",
+    "name": "Chicken Broth",
+    "region_id": "aisle_2",
+    "buy_factor": 0.11
+  },
+  {
+    "id": "p_2154",
+    "name": "Ketchup",
+    "region_id": "aisle_3",
+    "buy_factor": 0.08
+  },
+  {
+    "id": "p_2155",
+    "name": "BBQ Sauce",
+    "region_id": "aisle_3",
+    "buy_factor": 0.14
+  },
+  {
+    "id": "p_2156",
+    "name": "Flour",
+    "region_id": "aisle_3",
+    "buy_factor": 0.13
+  },
+  {
+    "id": "p_2289",
+    "name": "Tomato Sauce",
+    "region_id": "aisle_4",
+    "buy_factor": 0.41
+  },
+  {
+    "id": "p_2290",
+    "name": "Noodles",
+    "region_id": "aisle_4",
+    "buy_factor": 0.36
+  },
+  {
+    "id": "p_2291",
+    "name": "Canned Corn",
+    "region_id": "aisle_4",
+    "buy_factor": 0.38
+  },
+  {
+    "id": "p_2316",
+    "name": "Potato Chips",
+    "region_id": "aisle_5",
+    "buy_factor": 0.96
+  },
+  {
+    "id": "p_2317",
+    "name": "Popcorn",
+    "region_id": "aisle_5",
+    "buy_factor": 0.14
+  },
+  {
+    "id": "p_2318",
+    "name": "Cookies",
+    "region_id": "aisle_5",
+    "buy_factor": 0.91
+  },
+  {
+    "id": "p_2465",
+    "name": "Bread Loaf",
+    "region_id": "aisle_6",
+    "buy_factor": 0.82
+  },
+  {
+    "id": "p_2466",
+    "name": "Rolls",
+    "region_id": "aisle_6",
+    "buy_factor": 0.76
+  },
+  {
+    "id": "p_2467",
+    "name": "Peanut Butter",
+    "region_id": "aisle_6",
+    "buy_factor": 0.19
+  },
+  {
+    "id": "p_2550",
+    "name": "Bottled Water",
+    "region_id": "aisle_7",
+    "buy_factor": 0.55
+  },
+  {
+    "id": "p_2551",
+    "name": "Energy Drink",
+    "region_id": "aisle_7",
+    "buy_factor": 0.17
+  },
+  {
+    "id": "p_2552",
+    "name": "Soda",
+    "region_id": "aisle_7",
+    "buy_factor": 0.57
+  },
+  {
+    "id": "p_2616",
+    "name": "Frozen Pizza",
+    "region_id": "aisle_8",
+    "buy_factor": 0.78
+  },
+  {
+    "id": "p_2617",
+    "name": "Frozen Dinner Meal",
+    "region_id": "aisle_8",
+    "buy_factor": 0.71
+  },
+  {
+    "id": "p_2618",
+    "name": "Frozen Chicken",
+    "region_id": "aisle_8",
+    "buy_factor": 0.72
+  },
+  {
+    "id": "p_2733",
+    "name": "Frozen Breakfast Meal",
+    "region_id": "aisle_9",
+    "buy_factor": 0.51
+  },
+  {
+    "id": "p_2734",
+    "name": "Ice Cream",
+    "region_id": "aisle_9",
+    "buy_factor": 0.65
+  },
+  {
+    "id": "p_2735",
+    "name": "Frozen Yogurt",
+    "region_id": "aisle_9",
+    "buy_factor": 0.31
+  },
+  {
+    "id": "p_2814",
+    "name": "Dog Food",
+    "region_id": "aisle_10",
+    "buy_factor": 0.16
+  },
+  {
+    "id": "p_2815",
+    "name": "Cat Food",
+    "region_id": "aisle_10",
+    "buy_factor": 0.11
+  },
+  {
+    "id": "p_2816",
+    "name": "Pet Treats",
+    "region_id": "aisle_10",
+    "buy_factor": 0.07
+  },
+  {
+    "id": "p_3016",
+    "name": "Paper Plates",
+    "region_id": "aisle_11",
+    "buy_factor": 0.08
+  },
+  {
+    "id": "p_3017",
+    "name": "Paper Towels",
+    "region_id": "aisle_11",
+    "buy_factor": 0.16
+  },
+  {
+    "id": "p_3018",
+    "name": "Plasticware",
+    "region_id": "aisle_11",
+    "buy_factor": 0.06
+  },
+  {
+    "id": "p_3133",
+    "name": "Laundry Detergent",
+    "region_id": "aisle_12",
+    "buy_factor": 0.07
+  },
+  {
+    "id": "p_3134",
+    "name": "Dishwasher Detergent",
+    "region_id": "aisle_12",
+    "buy_factor": 0.05
+  },
+  {
+    "id": "p_3135",
+    "name": "Soap",
+    "region_id": "aisle_12",
+    "buy_factor": 0.11
+  },
+  {
+    "id": "p_3250",
+    "name": "Toothpaste",
+    "region_id": "aisle_13",
+    "buy_factor": 0.02
+  },
+  {
+    "id": "p_3251",
+    "name": "Shampoo",
+    "region_id": "aisle_13",
+    "buy_factor": 0.05
+  },
+  {
+    "id": "p_3252",
+    "name": "Conditioner",
+    "region_id": "aisle_13",
+    "buy_factor": 0.06
+  },
+  {
+    "id": "p_3341",
+    "name": "Greeting Card",
+    "region_id": "aisle_14",
+    "buy_factor": 0.05
+  },
+  {
+    "id": "p_3342",
+    "name": "Magazine",
+    "region_id": "aisle_14",
+    "buy_factor": 0.02
+  },
+  {
+    "id": "p_3343",
+    "name": "Gift Card",
+    "region_id": "aisle_14",
+    "buy_factor": 0.05
+  },
+  {
+    "id": "p_3489",
+    "name": "Beer",
+    "region_id": "aisle_15",
+    "buy_factor": 0.08
+  },
+  {
+    "id": "p_3490",
+    "name": "Wine",
+    "region_id": "aisle_15",
+    "buy_factor": 0.07
+  },
+  {
+    "id": "p_5156",
+    "name": "Bread Loaf",
+    "region_id": "bakery",
+    "buy_factor": 0.32
+  },
+  {
+    "id": "p_5157",
+    "name": "Rolls",
+    "region_id": "bakery",
+    "buy_factor": 0.29
+  },
+  {
+    "id": "p_5158",
+    "name": "Muffins",
+    "region_id": "bakery",
+    "buy_factor": 0.11
+  },
+  {
+    "id": "p_9160",
+    "name": "Flower Bouquet",
+    "region_id": "floral",
+    "buy_factor": 0.02
+  },
+  {
+    "id": "p_9161",
+    "name": "Flower Pot",
+    "region_id": "floral",
+    "buy_factor": 0.01
+  },
+  {
+    "id": "p_9625",
+    "name": "Vitamins",
+    "region_id": "medical",
+    "buy_factor": 0.07
+  },
+  {
+    "id": "p_9626",
+    "name": "Allergy Relief",
+    "region_id": "medical",
+    "buy_factor": 0.05
+  },
+  {
+    "id": "p_9627",
+    "name": "Pain Relief",
+    "region_id": "medical",
+    "buy_factor": 0.03
+  }
+]
