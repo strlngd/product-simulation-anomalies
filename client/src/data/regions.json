@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "produce",
     "name": "Produce",
     "points": [
       { "x": 609, "y": 97 },
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "bakery",
     "name": "Bakery",
     "points": [
       { "x": 0, "y": 10 },
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "aisle_1",
     "name": "Aisle 1 (Cereal)",
     "points": [
       { "x": 568, "y": 88 },
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "aisle_2",
     "name": "Aisle 2 (Soups)",
     "points": [
       { "x": 528, "y": 88 },
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "aisle_3",
     "name": "Aisle 3 (Condiments)",
     "points": [
       { "x": 488, "y": 88 },
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "aisle_4",
     "name": "Aisle 4 (Pasta)",
     "points": [
       { "x": 448, "y": 88 },
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": "aisle_5",
     "name": "Aisle 5 (Chips)",
     "points": [
       { "x": 408, "y": 88 },
@@ -70,7 +70,7 @@
     ]
   },
   {
-    "id": "8",
+    "id": "aisle_6",
     "name": "Aisle 6 (Bread)",
     "points": [
       { "x": 368, "y": 88 },
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "id": "9",
+    "id": "aisle_7",
     "name": "Aisle 7 (Water)",
     "points": [
       { "x": 328, "y": 88 },
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "id": "10",
+    "id": "aisle_8",
     "name": "Aisle 8 (Frozen Dinners)",
     "points": [
       { "x": 288, "y": 88 },
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "id": "11",
+    "id": "aisle_9",
     "name": "Aisle 9 (Frozen Breakfast)",
     "points": [
       { "x": 248, "y": 88 },
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "id": "12",
+    "id": "aisle_10",
     "name": "Aisle 10 (Pet Food)",
     "points": [
       { "x": 208, "y": 88 },
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "id": "13",
+    "id": "aisle_11",
     "name": "Aisle 11 (Paper Goods)",
     "points": [
       { "x": 168, "y": 88 },
@@ -130,7 +130,7 @@
     ]
   },
   {
-    "id": "14",
+    "id": "aisle_12",
     "name": "Aisle 12 (Cleaning)",
     "points": [
       { "x": 128, "y": 88 },
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "id": "15",
+    "id": "aisle_13",
     "name": "Aisle 13 (Hygiene)",
     "points": [
       { "x": 88, "y": 88 },
@@ -150,7 +150,7 @@
     ]
   },
   {
-    "id": "16",
+    "id": "aisle_14",
     "name": "Aisle 14 (Housewares)",
     "points": [
       { "x": 48, "y": 88 },
@@ -160,7 +160,7 @@
     ]
   },
   {
-    "id": "17",
+    "id": "aisle_15",
     "name": "Aisle 15 (Beer & Wine)",
     "points": [
       { "x": 8, "y": 88 },
@@ -170,7 +170,7 @@
     ]
   },
   {
-    "id": "25",
+    "id": "meats",
     "name": "Meats",
     "points": [
       { "x": 760, "y": 70 },
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "id": "26",
+    "id": "milk_products",
     "name": "Milk Products",
     "points": [
       { "x": 160, "y": 10 },
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "id": "27",
+    "id": "seafood",
     "name": "Seafood",
     "points": [
       { "x": 500, "y": 10 },
@@ -200,7 +200,7 @@
     ]
   },
   {
-    "id": "28",
+    "id": "cheese",
     "name": "Cheese",
     "points": [
       { "x": 603, "y": 60 },
@@ -210,7 +210,7 @@
     ]
   },
   {
-    "id": "29",
+    "id": "deli",
     "name": "Deli",
     "points": [
       { "x": 635, "y": 425 },
@@ -221,7 +221,7 @@
     ]
   },
   {
-    "id": "30",
+    "id": "floral",
     "name": "Floral",
     "points": [
       { "x": 609, "y": 325 },
@@ -231,7 +231,7 @@
     ]
   },
   {
-    "id": "31",
+    "id": "medical",
     "name": "Medical",
     "points": [
       { "x": 15, "y": 450 },
