@@ -36,7 +36,7 @@ export class StoreVisualizerComponent {
 
   ngAfterViewInit() {
     const regions: Region[] = Array.from<Region>(regionsJson);
-    console.log(regions);
+    // console.log(regions);
     const canvas = this.heatmapCanvas.nativeElement;
     this.ctx = canvas.getContext('2d');
 

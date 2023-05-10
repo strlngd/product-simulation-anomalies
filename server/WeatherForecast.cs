@@ -1,4 +1,4 @@
-namespace server;
+namespace Server;
 
 public class WeatherForecast
 {
