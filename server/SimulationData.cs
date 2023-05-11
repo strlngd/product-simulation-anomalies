@@ -1,13 +1,14 @@
 ﻿namespace Server;
 
-public class PurchaseData
+public class SimulationData
 {
     public string Id { get; set; }
     
     public double BuyFactor { get; set; }
-    public IList<int> History { get; set; }
+    
+    public IList<double> History { get; set; }
 
-    public PurchaseData(string id, double buyFactor, IList<int> history)
+    public SimulationData(string id, double buyFactor, IList<double> history)
     {
         Id = id;
         BuyFactor = buyFactor;
