@@ -27,3 +27,8 @@ Regions are color-coded based on the percentage ratio of anomalies within their 
 Users can click on an individual region to display details of the products within that region in the details panel located to the right of the floorplan. From here, users can then click on individual products to view a graph of the product purchase trend with anomalies marked as a red (`+`) symbol.
 
 To simulate new data, the user can click on the `Simulate Next` button. They can adjust the total time to simulate with the ComboBox located left of the aforementioned button.
+
+## Anomaly Detection
+
+Anomaly dection is handled on the backend using an algorithm called DBScan.
+The DBScan algorithm is a well known clustering algorithm used for detecting outliers in multivariate data. It works by traversing through data points and creating clusters based on which surrounding points are within a certain radius. An epsilon value is supplied to the algorithm and represent the radius needed to be considered part of the same cluster. Additionally, a minPointsInCluster value determines the minimum size a processed cluster must be considered a valid cluster when the algorithm finishes. Any point(s) not contained within a valid cluster is considered an outlier/anomaly.
