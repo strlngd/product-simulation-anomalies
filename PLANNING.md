@@ -1,5 +1,7 @@
 # Planning
 
+> This was the initial planning done before starting the project.
+
 > Disclaimer: This project is a concept mockup and not intended to fully replicate inventory management systems.
 
 ## **Overview**
@@ -96,6 +98,13 @@ It should be noted, if we use machine learning, the `buy_factor` of a product sh
 ## **Visualization**
 
 Create a 2D top-down view of a store with labelled areas and aisles. Utilize simulated data to generate a heatmap of product purchases over an indicated timespan.
+
+Color Guide:
+
+- Green: No anomalies
+- Yellow: Up to 2.5% anomalies
+- Orange: Up to 5% anomalies
+- Red: More than 5% anomalies
 
 Create way to visualize product anomaly with scatter chart.
 

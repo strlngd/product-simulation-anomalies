@@ -29,6 +29,38 @@
         ><br />
         {{ tooltip.content }}
       </div>
+
+      <div
+        class="absolute z-30 right-0 bottom-0 flex flex-row text-white pointer-events-none"
+      >
+        <div class="text-lg mr-3">Key:</div>
+        <div class="text-xs text-center" style="width: 100px">
+          <div
+            class="w-full h-4 px-1"
+            [style.background-color]="colors[3] + '77'"
+          >
+            &gt;5% anomalies
+          </div>
+          <div
+            class="w-full h-4 px-1"
+            [style.background-color]="colors[2] + '77'"
+          >
+            &gt;2.5% anomalies
+          </div>
+          <div
+            class="w-full h-4 px-1"
+            [style.background-color]="colors[1] + '77'"
+          >
+            &gt;0% anomalies
+          </div>
+          <div
+            class="w-full h-4 px-1"
+            [style.background-color]="colors[0] + '77'"
+          >
+            No Anomalies
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div>

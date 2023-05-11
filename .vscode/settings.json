@@ -1,2 +1,4 @@
 {
+  "appService.defaultWebAppToDeploy": "/subscriptions/7b49e6ca-f5c8-4c16-bf6b-b7842019cc9b/resourceGroups/anomaly-simulator/providers/Microsoft.Web/sites/AnomalySimulatorClient",
+  "appService.deploySubpath": "client\\dist\\client"
 }

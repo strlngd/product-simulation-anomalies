@@ -9,7 +9,7 @@ import { Region } from '../models/region';
 import { deviation, mean } from 'd3';
 import * as productsJson from '../../data/products.json';
 import * as regionsJson from '../../data/regions.json';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 
 type AnomalyData = { id: string; anomaly_indices: number[] };
 
@@ -218,7 +218,7 @@ export class SimulatorService {
 
     return this.http
       .post<AnomalyData[]>(
-        environment.apiUrl + '/api/simulation/computeanomalies',
+        environment.apiUrl + '/simulation/computeanomalies',
         body
       )
       .pipe(shareReplay());
