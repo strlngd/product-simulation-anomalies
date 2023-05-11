@@ -1,14 +1,15 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Region } from '../models/region';
-import { Point } from '../models/point';
-import * as regionsJson from '../../data/regions.json';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Region } from '../../models/region';
+import { Point } from '../../models/point';
+import * as regionsJson from '../../../data/regions.json';
+import { SimulatorService } from '../../services/simulator.service';
 
 @Component({
   selector: 'app-store-visualizer',
   templateUrl: './store-visualizer.component.html',
   styleUrls: ['./store-visualizer.component.css'],
 })
-export class StoreVisualizerComponent {
+export class StoreVisualizerComponent implements AfterViewInit {
   @ViewChild('heatmapCanvas', { static: false }) heatmapCanvas!: ElementRef;
   @ViewChild('overlayDiv', { static: false }) overlayDiv!: ElementRef;
 
@@ -34,17 +35,43 @@ export class StoreVisualizerComponent {
     content: '',
   };
 
+  constructor(private _simulatorService: SimulatorService) {}
+
   ngAfterViewInit() {
-    const regions: Region[] = Array.from<Region>(regionsJson);
-    // console.log(regions);
     const canvas = this.heatmapCanvas.nativeElement;
     this.ctx = canvas.getContext('2d');
 
-    regions.forEach((region) => {
-      const color = this.colors[Math.floor(Math.random() * 4)];
-      this.drawRegionPoints(color, region.points);
-      this.addRegionPath(region);
+    this._simulatorService.getRefresh().subscribe((value: boolean) => {
+      if (!value) return;
+      this.refreshRegionColors();
     });
+
+    this._simulatorService.init();
+  }
+
+  refreshRegionColors() {
+    this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+    this._simulatorService
+      .getLastAnomaliesForRegions()
+      .subscribe((regionMap) => {
+        regionMap.forEach((numAnomalies, region) => {
+          const productCount = this._simulatorService.regionProducts.get(
+            region.id
+          )!.length;
+          const percentAnomalies =
+            numAnomalies /
+            (productCount * this._simulatorService.historyStorageAmount);
+          let color = this.colors[0];
+          if (numAnomalies > 0) {
+            color = this.colors[1];
+            if (percentAnomalies > 0.025 && percentAnomalies <= 0.05)
+              color = this.colors[2];
+            else if (percentAnomalies > 0.05) color = this.colors[3];
+          }
+          this.drawRegionPoints(color, region.points);
+          this.addRegionPath(region);
+        });
+      });
   }
 
   /**
@@ -86,19 +113,6 @@ export class StoreVisualizerComponent {
     this.tooltip.content = `Clicked ${region.name}`;
     this.selectedRegion = region;
   }
-
-  // drawRegionRect(
-  //   color: string,
-  //   x: number,
-  //   y: number,
-  //   width: number,
-  //   height: number
-  // ) {
-  //   this.ctx.fillStyle = color;
-  //   this.ctx.globalAlpha = this.overlayAlpha;
-  //   this.ctx.fillRect(x, y, width, height);
-  //   this.ctx.globalAlpha = 1;
-  // }
 
   drawRegionPoints(color: string, points: Point[]) {
     if (points.length < 3) return;

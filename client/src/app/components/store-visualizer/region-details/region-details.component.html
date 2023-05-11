@@ -1,0 +1,45 @@
+<div
+  class="lg:w-64 h-full bg-slate-700 rounded-md ml-2 p-3 text-white text-center"
+>
+  <div class="">
+    <span class="font-bold text-3xl">Region Details</span>
+  </div>
+  <hr class="mt-1" />
+  <div *ngIf="!region" class="">
+    Click on a region to view further details about it.
+  </div>
+  <div *ngIf="region" class="">
+    <div class="text-xl pb-3">
+      {{ region.name }}
+    </div>
+    <div class="flex flex-col">
+      <div
+        *ngFor="let item of data; index as i"
+        (click)="lineChart.product = item.product"
+        class="cursor-pointer hover:bg-slate-600 py-3"
+      >
+        <div class="text-lg font-bold">
+          {{ item.product.name }}
+        </div>
+
+        <div class="">Buy Factor: {{ item.buyFactor | number : "1.3-3" }}</div>
+
+        <div class="">
+          Percent Change:
+          <span
+            [ngClass]="item.percentDiff < 0 ? 'text-red-400' : 'text-green-400'"
+            >({{ item.percentDiff * 100 | number : "1.1-1" }}%)</span
+          >
+        </div>
+        <div class="">Anomaly Count: {{ item.anomalyCount }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  [ngClass]="!lineChart.product ? 'h-0' : 'h-screen'"
+  class="fixed overflow-hidden w-screen z-50 top-0 left-0"
+>
+  <app-line-chart #lineChart [product]="undefined"></app-line-chart>
+</div>
