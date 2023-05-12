@@ -31,6 +31,9 @@ public class SimulationController : Controller
                 pointData.AddRange(sim.History.Select((t, i) => new SimulationPoint(0, t)));
                 for (var i = 0; i < padding; i++)
                     pointData.Add(new SimulationPoint(0, sim.History[sim.History.Count - 1]));
+
+                // We define the epsilon value of DBScan as the sim factor divided by 3 with a minimum of 8 points per cluster.
+                // Throughout testing, these were the simplest values used to generate a decent result.
                 var clusterSet = Dbscan.Dbscan.CalculateClusters(pointData, sim.BuyFactor / 3, 8);
 
                 // Note: DBScan only returns the values and not the indices. We could fork the repo and modify the library for a performance boost.
