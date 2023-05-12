@@ -12,6 +12,7 @@
       <canvas
         #heatmapCanvas
         class="absolute left-0 top-0 z-20"
+        [style.cursor]="tooltip.visible ? 'pointer' : 'default'"
         [width]="width"
         [height]="height"
         (mousemove)="handleMouseMovement($event)"

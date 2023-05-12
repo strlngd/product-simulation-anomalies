@@ -38,8 +38,8 @@
 </div>
 
 <div
-  [ngClass]="!lineChart.product ? 'h-0' : 'h-screen'"
-  class="fixed overflow-hidden w-screen z-50 top-0 left-0"
+  [ngClass]="!lineChart.product ? 'h-0' : 'h-full'"
+  class="fixed overflow-hidden w-full z-50 top-0 left-0"
 >
   <app-line-chart #lineChart [product]="undefined"></app-line-chart>
 </div>
