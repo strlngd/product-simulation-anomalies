@@ -2,7 +2,7 @@
 
 A project created to simulate product purchases within a grocery or other retail environment to visualize purchase anomalies. Such anomalies could be indicative of changes in purchase patterns outside the normal trend. In real-world situations, this may lead to a shortage or surplus of products which could result in out of stock or expired goods.
 
-Note that this project is a proof-of-concept prototype and is not connected to any real product data.
+> Note that this project is a proof-of-concept prototype and is not connected to any real product data.
 
 ## Technologies Used
 
