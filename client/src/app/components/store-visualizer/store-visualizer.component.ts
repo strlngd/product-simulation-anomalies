@@ -24,15 +24,15 @@ export class StoreVisualizerComponent implements AfterViewInit {
   tooltip: {
     x: number;
     y: number;
-    visible: boolean;
     title: string;
     content: string;
+    visible: boolean;
   } = {
     x: 0,
     y: 0,
-    visible: false,
     title: '',
     content: '',
+    visible: false,
   };
 
   constructor(private _simulatorService: SimulatorService) {}
@@ -74,12 +74,6 @@ export class StoreVisualizerComponent implements AfterViewInit {
       });
   }
 
-  /**
-   * Helper function for getting the first region that contains a given point.
-   * @param x
-   * @param y
-   * @returns The first region found or null otherwise.
-   */
   getRegionFromPoint(x: number, y: number): Region | null {
     for (const region of this.regionPaths.keys()) {
       const path = this.regionPaths.get(region);

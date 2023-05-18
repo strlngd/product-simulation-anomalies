@@ -16,6 +16,8 @@ interface productDetailsData {
   styleUrls: ['./region-details.component.css'],
 })
 export class RegionDetailsComponent implements OnInit {
+  data: productDetailsData[] = [];
+
   private _region!: Region;
 
   @Input() set region(value: Region) {
@@ -26,8 +28,6 @@ export class RegionDetailsComponent implements OnInit {
   get region(): Region {
     return this._region;
   }
-
-  data: productDetailsData[] = [];
 
   constructor(private _simulatorService: SimulatorService) {}
 
